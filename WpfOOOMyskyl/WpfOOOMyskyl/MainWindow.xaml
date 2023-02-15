@@ -1,0 +1,96 @@
+﻿<Window x:Class="WpfOOOMyskyl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfOOOMyskyl"
+        xmlns:capc="clr-namespace:EasyCaptcha.Wpf;assembly=EasyCaptcha.Wpf"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="476" Width="460" 
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip">
+    <Border CornerRadius="15" MinWidth="450" MinHeight="450" Background="White">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="272"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="81*"/>
+                <RowDefinition Height="81*"/>
+                <RowDefinition Height="64*"/>
+                <RowDefinition Height="75*"/>
+                <RowDefinition Height="121*"/>
+            </Grid.RowDefinitions>
+            <Border
+                    Background="#AA9DD1"
+                    CornerRadius="10,10,0,0"
+                MouseDown="Border_MouseDown" Grid.ColumnSpan="3" Margin="0,0,0,27" Grid.RowSpan="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220*"/>
+                        <ColumnDefinition Width="219*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="ООО Мускулы"
+                           FontSize="10"
+                           Foreground="#515075"
+                           FontWeight="Normal" RenderTransformOrigin="0.499,0.653" Grid.ColumnSpan="2" Margin="0,0,0,4"/>
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="141,0,3,0" Width="65" Grid.Column="1" >
+
+                        <Button Width="18" Height="18"
+                                Background="Transparent"
+                                Content="—"
+                                BorderBrush="Transparent"
+                                Foreground="#515075"
+                                FontWeight="Bold"
+                                Margin="2"
+                                Click="ButtonMin_Click"
+                                >
+
+                        </Button>
+                        <Button Width="18" Height="18"
+                                Background="Transparent"
+                                Content="☐"
+                                BorderBrush="Transparent"
+                                Foreground="#515075"
+                                FontWeight="Bold"
+                                Margin="2"
+                                Click="ButtonOpen_Click">
+
+                        </Button>
+                        <Button Width="18" Height="18"
+                                Background="Transparent"
+                                Content="Χ"
+                                BorderBrush="Transparent"
+                                Foreground="#515075"
+                                FontWeight="Bold"
+                                 Margin="2"
+                                Click="ButtonClose_Click">
+                        </Button>
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <TextBox x:Name="TextLogin" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Логин..." VerticalAlignment="Center" Width="180" Height="23" Foreground="#FFAA9DD1" BorderBrush="#FFAA9DD1" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" FontSize="16" TextChanged="TextLogin_TextChanged"/>
+            <TextBox x:Name="TextPassword" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="Пароль..." VerticalAlignment="Center" Width="180" Height="25" RenderTransformOrigin="0.5,0.5" Foreground="#FFAA9DD1" BorderBrush="#FFAA9DD1" FontSize="16">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.359"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <Button Background="Transparent" Grid.Column="1" Content="Войти" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Width="90"  Height="20" Click="Button_Click_1" BorderBrush="#FFAA9DD1" Foreground="#FFAA9DD1" FontWeight="Bold" Margin="163,0,0,0"/>
+            <Button Background="Transparent" Grid.Column="1" Content="Войти как гость" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Width="136"  Height="20" BorderBrush="#FFAA9DD1" Foreground="#FFAA9DD1" FontWeight="Bold" Click="Button_Click" Margin="17,0,0,0"/>
+            <capc:Captcha Visibility="Visible" Name="captcha2" Grid.Column="1" Margin="40,5,32,6" Grid.Row="4" FontWeight="Normal"/>
+        </Grid>
+    </Border>
+</Window>

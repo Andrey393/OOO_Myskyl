@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "29663ab5-9a2a-40ff-9a77-a7712d11b1b8": {
+      "ProjectGuid": "29663ab5-9a2a-40ff-9a77-a7712d11b1b8",
+      "DisplayName": "WpfOOOMyskyl",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
